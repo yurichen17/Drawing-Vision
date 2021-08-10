@@ -1,0 +1,148 @@
+body{
+    margin:0;
+    padding:30;
+    margin-top: 30px;
+    background:#cccccc;
+    font-family:'Roboto', 'Helvetica', sans-serif;
+}
+
+.f{
+    flex-direction: column;
+    -ms-flex-item-align: center;
+    justify-content: center;
+}
+    
+main{
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    width:50px;
+    background:#171717}
+    
+main section{
+    display:block;
+    margin:15px auto;
+    width:30px;
+    height:30px}
+    
+main .colors{
+    background-image: url("/assets/css/rainbow.jpg");
+    background-size: 45px;
+    background-position: center;
+    border:1px solid #F3F3F3;
+    position:relative}
+    
+main .colors .color-picker{
+    display:none;
+    width:200px;
+    height:30px;
+    position:absolute;
+    top:50%;
+    left:30px;
+    -webkit-transform:translateY(-50%);
+    transform:translateY(-50%)}
+    
+main .colors .color-picker:focus{
+    display:block
+}
+    
+main .colors:hover .color-picker{
+    display:block
+}
+    
+main .thickness{
+    position:relative;
+    background-color:#F3F3F3
+}
+    
+main .thickness::after{
+    content:'';
+    position:absolute;
+    left:50%;
+    top:50%;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+    width:50%;
+    height:50%;
+    border-radius:50%;
+    background:#171717
+}
+    
+main .thickness .stroke-weight{
+    display:none;
+    position:absolute;
+    width:auto;
+    background-color: blue;
+    background-size: 40px;
+    height:25px;
+    left:30px;
+    top:50%;
+    -webkit-transform:translateY(-50%);
+    transform:translateY(-50%)
+}
+    
+main .thickness .stroke-weight:focus{
+    display:block
+}
+    
+main .thickness:hover .stroke-weight{
+    display:block
+}
+    
+main .clear{
+    display:block;
+    width:30px;
+    height:30px;
+    margin:0 auto;
+    color:#171717;
+    font-size:20px;
+    font-weight:900;
+    background-color:#FFCE00;
+    border:none;
+    outline:none;
+    cursor:pointer}
+
+main .next{
+    display:block;
+    width:30px;
+    height:30px;
+    margin:0 auto;
+    color:#171717;
+    font-size:20px;
+    font-weight:900;
+    background-color:#6fe679;
+    border:none;
+    outline:none;
+    cursor:pointer
+}
+
+main .about{
+    display:none;
+    width:30px;
+    height:30px;
+    margin:0 auto;
+    color:#171717;
+    font-size:20px;
+    font-weight:900;
+    background-color:#7c7bd6;
+    border:none;
+    outline:none;
+    cursor:pointer
+}
+
+
+
+    
+.text{
+    padding-top: 30px;
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.canv{
+    background-color: #ffffff;
+    box-shadow:-3px 2px 9px 6px black;
+    cursor: pointer;
+}

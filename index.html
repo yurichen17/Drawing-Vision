@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Drawing Vision</title>
+  <link rel="stylesheet" href="assets/css/main.min.css" />
+</head>
+<body>
+  <div class="f">
+    <canvas class="canv" id="can"></canvas>
+    <main>
+      <section class="colors">
+        <input type="color" class="color-picker" value="#171717" />
+      </section>
+      <section class="thickness">
+        <input type="range" class="stroke-weight" value="3" />
+      </section>
+      <button class="clear" title="Clear board">X</button>
+      <section>
+        <a id="download" download="image.png">
+        <button class="next" type="button" onClick="download()" 
+          title="Run drawing through tensorflow">R</button></a>
+      </section>
+      <button class="about" >?</button>
+    </main>
+    <script src="assets/js/main.js"></script>
+    <!-- Load TensorFlow.js. This is required to use MobileNet. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.1"> </script>
+    <!-- Load the MobileNet model. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0"> </script>
+
+    <!-- Replace this with your image. Make sure CORS settings allow reading the image! -->
+    <div class="text">The computer thinks this is a...</div>
+    <div class="text" id="pred"></div>
+    <div class="text" id="per"></div>
+  </div>
+
+
+</body>
+</html>
